@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ashwinchandlapur.animalsounds.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cat"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:id="@+id/pets"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="pets" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/tiger"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/pets"
+            android:id="@+id/wild"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="wild" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cow"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/wild"
+            android:id="@+id/farm"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="farm" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/woodpekker"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/farm"
+            android:id="@+id/bird"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="bird" />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
