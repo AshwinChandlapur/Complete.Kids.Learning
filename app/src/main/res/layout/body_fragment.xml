@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bodyname"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Parts of the Body"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp"
+        android:visibility="invisible"/>
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hairs"
+        android:src="@drawable/hair"
+        android:background="@null"
+        android:clickable="true"
+       android:layout_margin="3dp"
+        android:layout_alignTop="@+id/home"
+        android:layout_toLeftOf="@+id/home"
+        android:layout_toStartOf="@+id/home"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eyebrows"
+        android:src="@drawable/eyebrow"
+        android:background="@null"
+        android:padding="3dp"
+        android:visibility="gone"
+         />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noses"
+        android:src="@drawable/nose"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignTop="@+id/home"
+        android:layout_alignLeft="@+id/home"
+        android:layout_alignStart="@+id/home"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mouths"
+        android:src="@drawable/mouth"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignTop="@+id/home"
+        android:layout_toRightOf="@+id/home"
+        android:layout_toEndOf="@+id/home"
+        android:visibility="gone"/>
+
+   <ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fingerss"
+    android:src="@drawable/fingers"
+    android:background="@null"
+       android:visibility="gone"
+
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eyess"
+        android:src="@drawable/eyes"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignTop="@+id/earss"
+        android:layout_toLeftOf="@+id/earss"
+        android:layout_toStartOf="@+id/earss"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/earss"
+        android:src="@drawable/ears"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/necks"
+        android:layout_toStartOf="@+id/necks"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/necks"
+        android:src="@drawable/neck"
+        android:background="@null"
+        android:layout_margin="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/home"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/handss"
+        android:src="@drawable/hands"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignTop="@+id/necks"
+        android:layout_toRightOf="@+id/home"
+        android:layout_toEndOf="@+id/home"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/legss"
+        android:src="@drawable/legs"
+        android:background="@null"
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/handss"
+        android:layout_toEndOf="@+id/handss"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swipe Right to Learn More"
+        android:textColor="#E4F1FE"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/handles"
+        android:gravity="center"
+        android:layout_below="@+id/tv"
+         />
+
+
+    <!--  <ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/ears"
+          android:src="@drawable/ears"
+          android:background="@null"
+          android:scaleType="centerCrop"
+          android:visibility="visible"
+          android:layout_centerVertical="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:paddingBottom="34dp"
+          android:paddingLeft="20dp" />-->
+
+
+
+
+</RelativeLayout>

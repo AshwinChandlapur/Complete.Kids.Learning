@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:id="@+id/btn"
+        android:id="@+id/btnp1"
         android:src="@drawable/next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -33,13 +33,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:id="@+id/btn1"
+        android:id="@+id/btn1p1"
         android:src="@drawable/next1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:paddingLeft="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignTop="@+id/btn1p1"
+        android:layout_centerHorizontal="true" />
 
 
 

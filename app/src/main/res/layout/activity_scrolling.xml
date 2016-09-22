@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.ashwinchandlapur.animalsounds.ScrollingActivity">
+    tools:context="com.ashwin.ashwinchandlapur.animalsounds.ScrollingActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -21,7 +21,7 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:background="@drawable/background"
+            android:background="@drawable/background1"
             android:textAlignment="center">
 
             <android.support.v7.widget.Toolbar

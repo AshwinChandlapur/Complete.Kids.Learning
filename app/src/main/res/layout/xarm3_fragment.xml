@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/duck"
+    android:background="@drawable/ducks"
     android:layout_height="match_parent"
     >
 
@@ -40,6 +40,15 @@
         android:paddingLeft="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignTop="@+id/btn"
+        android:layout_centerHorizontal="true" />
 
 
 

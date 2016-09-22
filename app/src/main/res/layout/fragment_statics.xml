@@ -1,0 +1,153 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#2e2e2e"
+    android:layout_height="match_parent" >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body Parts"
+            android:textSize="30sp"
+            android:textColor="#E4F1FE"
+            android:id="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click on Images for Pronounciation"
+            android:textSize="12sp"
+            android:id="@+id/click"
+            android:textColor="#E4F1FE"
+            android:layout_gravity="center"/>
+
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noser"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/nose2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nose - To Breathe"
+        android:id="@+id/nose2"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_below="@+id/scrollView"
+        android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eyer"
+            android:src="@drawable/eyes2"
+            android:background="@null"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Eyes - To See"
+            android:id="@+id/eyes2"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ears2"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/earer"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ears - To Hear"
+            android:id="@+id/ears2"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/mouth2"
+            android:id="@+id/mouther"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Mouth - To Eat"
+            android:id="@+id/mouth2"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/hands2"
+            android:id="@+id/hander"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Hands - To Write"
+            android:id="@+id/hands2"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/legs2"
+            android:id="@+id/leger"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Legs - To Walk"
+            android:id="@+id/legs2"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

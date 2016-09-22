@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3e3e3e"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.ashwinchandlapur.animalsounds.ScrollingActivity"
+    tools:context="com.ashwin.ashwinchandlapur.animalsounds.ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
     <LinearLayout
         android:orientation="vertical"
@@ -14,22 +15,21 @@
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/cat"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pets"
             android:adjustViewBounds="true"
             android:maxWidth="250dp"
             android:maxHeight="250dp"
             android:scaleType="fitCenter"
             android:clickable="true"
             android:id="@+id/pets"
-            android:paddingTop="20dp"
             android:background="@null"
             android:layout_centerHorizontal="true"
             android:onClick="pets" />
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/tiger"
+            android:src="@drawable/wildanimals"
             android:adjustViewBounds="true"
             android:maxWidth="250dp"
             android:maxHeight="250dp"
@@ -37,7 +37,7 @@
             android:clickable="true"
             android:layout_below="@+id/pets"
             android:id="@+id/wild"
-            android:paddingTop="20dp"
+            android:paddingTop="10dp"
             android:background="@null"
             android:layout_centerHorizontal="true"
             android:onClick="wild" />
@@ -45,7 +45,7 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/cow"
+            android:src="@drawable/farm"
             android:adjustViewBounds="true"
             android:maxWidth="250dp"
             android:maxHeight="250dp"
@@ -53,7 +53,7 @@
             android:clickable="true"
             android:layout_below="@+id/wild"
             android:id="@+id/farm"
-            android:paddingTop="20dp"
+            android:paddingTop="10dp"
             android:background="@null"
             android:layout_centerHorizontal="true"
             android:onClick="farm" />
@@ -61,18 +61,34 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/woodpekker"
+            android:src="@drawable/birds"
             android:adjustViewBounds="true"
             android:maxWidth="250dp"
             android:maxHeight="250dp"
             android:scaleType="fitCenter"
             android:clickable="true"
-            android:layout_below="@+id/farm"
+            android:layout_below="@+id/birds"
             android:id="@+id/bird"
-            android:paddingTop="20dp"
+            android:paddingTop="10dp"
             android:background="@null"
             android:layout_centerHorizontal="true"
             android:onClick="bird" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/aquatic"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/bird"
+            android:id="@+id/ocean"
+            android:paddingTop="10dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="ocean" />
 
     </LinearLayout>
 

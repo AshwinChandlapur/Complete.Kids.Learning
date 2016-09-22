@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/dolphin"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:text="Dolphins"
+        android:textColor="#2c3e50"
+        android:textSize="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/btno6"
+        android:src="@drawable/next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/btn1o6"
+        android:src="@drawable/next1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignTop="@+id/btn1o6"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

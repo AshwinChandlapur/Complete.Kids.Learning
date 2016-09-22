@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/strip"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ashwin.ashwinchandlapur.animalsounds.MainScroller"
+    tools:showIn="@layout/activity_main_scroller">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alphabet"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:id="@+id/alphabets"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="alphabets" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/animalsounds"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/alphabets"
+            android:id="@+id/animals"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="animals" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/partsofbody"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/animals"
+            android:id="@+id/bodyparts"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="bodyparts" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Feedback &amp; Credits"
+            android:id="@+id/credits"
+            android:textColor="#E4F1FE"
+            android:gravity="center_horizontal"
+            android:onClick="credits"/>
+
+      <!--  <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/alphabet"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/birds"
+            android:id="@+id/bird"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="bird" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/alphabet"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/bird"
+            android:id="@+id/ocean"
+            android:paddingTop="20dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="ocean" />-->
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

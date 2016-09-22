@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ashwinchandlapur.animalsounds">
+    package="com.ashwinchandlapur.animalsounds">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.ashwinchandlapur.animalsounds.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ashwinchandlapur.animalsounds.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive dataf message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -9,19 +23,112 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/app_name"
+            android:name="com.ashwinchandlapur.animalsounds.ScrollingActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_scrolling"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
-        <activity android:name=".WildActivity" />
-        <activity android:name=".YbirdActivity" />
-        <activity android:name=".XarmActivity" />
-        <activity android:name=".PetActivity"></activity>
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.WildActivity"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.YbirdActivity"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.XarmActivity"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.PetActivity"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.OceanActivity"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.SplasherActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="com.ashwinchandlapur.animalsounds.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.alphabet"
+            android:configChanges="orientation"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.MainScroller"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_main_scroller"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+                <intent-filter>
+                <action android:name="com.example.ashwinchandlapur.animalsounds.MESSAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.BodyActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ashwinchandlapur.animalsounds.feedbacks"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.pushbots.google.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.ashwinchandlapur.animalsounds" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pushbots.push.DefaultPushHandler" />
+
+        <service android:name="com.pushbots.push.GCMIntentService" />
+
+        <activity android:name="com.ashwinchandlapur.animalsounds.BodymaActivity"></activity>
     </application>
 
 </manifest>

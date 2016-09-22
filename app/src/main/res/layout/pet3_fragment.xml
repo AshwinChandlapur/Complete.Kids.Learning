@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:text="Dog"
-        android:textColor="#2c3e50"
+        android:textColor="#ecf0f1"
         android:textSize="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:id="@+id/btn"
+        android:id="@+id/btnp3"
         android:src="@drawable/next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -33,13 +33,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:id="@+id/btn1"
+        android:id="@+id/btn1p3"
         android:src="@drawable/next1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:paddingLeft="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignTop="@+id/btn1p3"
+        android:layout_centerHorizontal="true" />
 
 
 

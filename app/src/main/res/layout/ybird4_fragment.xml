@@ -41,6 +41,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignTop="@+id/btn1"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
