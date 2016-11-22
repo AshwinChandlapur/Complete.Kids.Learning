@@ -56,6 +56,21 @@
             android:layout_centerHorizontal="true"
             android:onClick="bodyparts" />
 
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/numbers1"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:layout_below="@+id/bodyparts"
+            android:id="@+id/numbers"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="numbers" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

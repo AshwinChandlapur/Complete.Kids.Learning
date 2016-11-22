@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.ScrollingActivity"
+            android:name=".ScrollingActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_scrolling"
             android:screenOrientation="portrait"
@@ -38,37 +38,37 @@
             -->
         </activity>
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.WildActivity"
+            android:name=".WildActivity"
             android:configChanges="orientation"
-            android:noHistory="true"
             android:launchMode="singleTask"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.YbirdActivity"
+            android:name=".YbirdActivity"
             android:configChanges="orientation"
-            android:noHistory="true"
             android:launchMode="singleTask"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.XarmActivity"
+            android:name=".XarmActivity"
             android:configChanges="orientation"
-            android:noHistory="true"
             android:launchMode="singleTask"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.PetActivity"
+            android:name=".PetActivity"
             android:configChanges="orientation"
-            android:noHistory="true"
             android:launchMode="singleTask"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.OceanActivity"
+            android:name=".OceanActivity"
             android:configChanges="orientation"
-            android:noHistory="true"
             android:launchMode="singleTask"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.SplasherActivity"
+            android:name=".SplasherActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -83,12 +83,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.alphabet"
+            android:name=".alphabet"
             android:configChanges="orientation"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.MainScroller"
+            android:name=".MainScroller"
             android:configChanges="orientation"
             android:label="@string/title_activity_main_scroller"
             android:screenOrientation="portrait"
@@ -103,11 +103,11 @@
 
         </activity>
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.BodyActivity"
+            android:name=".BodyActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ashwinchandlapur.animalsounds.feedbacks"
+            android:name=".feedbacks"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
 
@@ -128,7 +128,8 @@
 
         <service android:name="com.pushbots.push.GCMIntentService" />
 
-        <activity android:name="com.ashwinchandlapur.animalsounds.BodymaActivity"></activity>
+        <activity android:name=".BodymaActivity" />
+        <activity android:name=".NumberActivity"></activity>
     </application>
 
 </manifest>

@@ -32,24 +32,7 @@ public class alphabet extends AppCompatActivity {
         //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ocean_activity);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
 
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(alphabet.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.95) {
-                    interstitial.show();
-                }
-
-            }
-        });
 
 		/* Instantiate a ViewPager and a PagerAdapter. */
         mPager = (ViewPager) findViewById(R.id.pager);

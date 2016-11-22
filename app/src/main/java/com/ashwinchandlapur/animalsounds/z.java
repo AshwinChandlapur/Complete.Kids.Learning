@@ -49,7 +49,7 @@ public class z extends Fragment {
         interstitial.setAdListener(new AdListener() {
             public void onAdLoaded() {
 // Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.7) {
+                if (interstitial.isLoaded()) {
                     interstitial.show();
                 }
 

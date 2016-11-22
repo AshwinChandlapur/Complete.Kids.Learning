@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Kids Complete Learning</string>
     <string name="admob_interstitial_id">ca-app-pub-1924436259631090/2853511567</string>
+    <!--<string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>-->
 
     <string name="action_settings">Settings</string>
 

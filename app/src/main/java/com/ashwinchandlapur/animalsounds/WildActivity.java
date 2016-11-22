@@ -33,25 +33,6 @@ public class WildActivity extends AppCompatActivity {
         setContentView(R.layout.wild_activity);
 
 
-        AdRequest adRequest = new AdRequest.Builder().build();
-
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(WildActivity.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.95) {
-                    interstitial.show();
-                }
-
-            }
-        });
-
 
 		/* Instantiate a ViewPager and a PagerAdapter. */
         mPager = (ViewPager) findViewById(R.id.pagerw);

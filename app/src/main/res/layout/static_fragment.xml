@@ -15,7 +15,8 @@
         android:textColor="#E4F1FE"
         android:textSize="30sp"
         android:id="@+id/request"
-        android:text="Request to Our Users" />
+        android:text="Request to Our Users"
+        android:visibility="invisible"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,6 +28,7 @@
             android:textSize="15sp"
             android:id="@+id/support"
             android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
             android:text="All the Revenue generated thorough ads will be solely used for development of E-Learning Applications." />
 
     <TextView
@@ -38,6 +40,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/support"
         android:id="@+id/keep"
+        android:visibility="invisible"
         android:text="Keep Supporting :)" />
 
 

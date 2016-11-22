@@ -48,12 +48,12 @@ public class SplasherActivity extends AppCompatActivity {
 
 
         Typeface myFont = Typeface.createFromAsset(this.getAssets(), "fonts/Kaushan.otf" );
-       // t.setTypeface(myFont);
+        // t.setTypeface(myFont);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(SplasherActivity.this, MainScroller.class);
-              //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 SplasherActivity.this.finish();
             }

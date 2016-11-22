@@ -17,10 +17,6 @@ public class ScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -34,12 +30,18 @@ public class ScrollingActivity extends AppCompatActivity {
         interstitial.setAdListener(new AdListener() {
             public void onAdLoaded() {
 // Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.3) {
+                if (interstitial.isLoaded()) {
                     interstitial.show();
                 }
 
             }
         });
+        setContentView(R.layout.activity_scrolling);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+
 
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

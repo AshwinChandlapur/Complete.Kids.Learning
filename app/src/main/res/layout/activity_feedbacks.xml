@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ashwin.ashwinchandlapur.animalsounds.feedbacks">
+    tools:context="com.ashwinchandlapur.animalsounds.feedbacks">
 
 
     <TextView
@@ -57,6 +57,7 @@
         android:textSize="15sp"
         android:id="@+id/support"
         android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
         android:text="\nAll the Revenue generated thorough ads will be solely used for development of E-Learning Applications." />
 
     <TextView
@@ -68,6 +69,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/support"
         android:id="@+id/keep"
+        android:visibility="invisible"
         android:text="Keep Supporting :)" />
     <TextView
         android:layout_width="wrap_content"
@@ -76,6 +78,7 @@
         android:text="Request to Our Users"
         android:textSize="20sp"
         android:id="@+id/ourusers"
+        android:visibility="invisible"
         android:layout_below="@+id/tv1"
         android:textColor="#E4F1FE"/>
 

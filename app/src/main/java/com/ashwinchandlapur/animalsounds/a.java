@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.ashwinchandlapur.animalsounds.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
 

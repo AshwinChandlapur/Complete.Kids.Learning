@@ -48,7 +48,7 @@ public class f extends Fragment {
         interstitial.setAdListener(new AdListener() {
             public void onAdLoaded() {
 // Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.85) {
+                if (interstitial.isLoaded()&& Math.random()>0.9) {
                     interstitial.show();
                 }
 
