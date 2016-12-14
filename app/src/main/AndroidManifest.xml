@@ -129,7 +129,8 @@
         <service android:name="com.pushbots.push.GCMIntentService" />
 
         <activity android:name=".BodymaActivity" />
-        <activity android:name=".NumberActivity"></activity>
+        <activity android:name=".NumberActivity" />
+        <activity android:name=".NotifHandler"></activity>
     </application>
 
 </manifest>
