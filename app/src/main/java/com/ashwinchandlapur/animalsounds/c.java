@@ -144,6 +144,7 @@ public class c extends Fragment {
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
 				 */
+               // trans.disallowAddToBackStack();
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
 

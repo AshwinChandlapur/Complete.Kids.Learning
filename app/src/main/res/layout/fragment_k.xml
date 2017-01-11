@@ -68,7 +68,7 @@
         android:id="@+id/your_id"
         android:layout_width="match_parent"
         android:layout_height="185dp"
-        android:background="#ffe0b2"
+        android:background="#263238"
 
         app:paintAlpha="255"
         app:paintColor="#ffffff"
@@ -99,6 +99,15 @@
         android:layout_toRightOf="@id/btn_undo"
         android:layout_toLeftOf="@+id/btn_redo"
         android:layout_alignTop="@id/btn_undo"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redo"
+        android:textColor="#ffffff"
+        android:id="@+id/btn_redo"
+        android:layout_below="@+id/your_id"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
 
 

@@ -145,7 +145,6 @@ public class l extends Fragment {
 				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
-
                 trans.commit();
             }
         });

@@ -16,7 +16,7 @@ public class alphabet extends AppCompatActivity {
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
     // For this example, only two pages
-    static final int NUM_ITEMS = 2;
+    static final int NUM_ITEMS = 1;
 
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
@@ -70,12 +70,11 @@ public class alphabet extends AppCompatActivity {
                 return new alphabetroot();
             else
                 return new StaticFragment();
-
         }
 
         @Override
         public int getCount() {
-            return NUM_ITEMS;
+            return 1;
         }
     }
    /* public void home(View v)

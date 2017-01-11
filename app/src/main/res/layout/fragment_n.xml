@@ -68,7 +68,7 @@
         android:id="@+id/your_id"
         android:layout_width="match_parent"
         android:layout_height="185dp"
-        android:background="#ffe0b2"
+        android:background="#00e676"
 
         app:paintAlpha="255"
         app:paintColor="#ffffff"

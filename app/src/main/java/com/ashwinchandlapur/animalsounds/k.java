@@ -143,8 +143,9 @@ public class k extends Fragment {
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
 				 */
-                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                trans.addToBackStack(null);
+               // trans.disallowAddToBackStack();
+                  trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+               trans.addToBackStack(null);
 
                 trans.commit();
             }
@@ -160,6 +161,7 @@ public class k extends Fragment {
 				 * IMPORTANT: We use the "root frame" defined in
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
+               //trans.getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 trans.replace(R.id.root_frameo, new j());
                 sound.stop();
 				/*
@@ -168,8 +170,8 @@ public class k extends Fragment {
 				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
-
                 trans.commit();
+
             }
         });
 
@@ -208,7 +210,6 @@ public class k extends Fragment {
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         mSignatureView.setPaintColor(color);
-
         //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
     }
 

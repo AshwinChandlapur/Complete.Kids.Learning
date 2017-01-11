@@ -9,8 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
 
@@ -69,7 +67,7 @@ public class YbirdActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return NUM_ITEMS;
+            return 1;
         }
     }
   /*  public void home(View v)
