@@ -1,6 +1,8 @@
 package com.ashwinchandlapur.animalsounds;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -11,19 +13,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.ashwinchandlapur.animalsounds.R;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.rm.freedraw.FreeDrawView;
+import com.rm.freedraw.PathDrawnListener;
+import com.rm.freedraw.PathRedoUndoCountChangeListener;
+import com.rm.freedraw.ResizeBehaviour;
+
+import java.util.Random;
 
 
 public class a extends Fragment {
     TextView t;
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
+    FreeDrawView mSignatureView;
     //private static final String TAG = "FirstFragment";
 
 
@@ -50,6 +57,76 @@ public class a extends Fragment {
         Typeface myFont = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Kaushan.otf");
         t.setTypeface(myFont);
 
+//Free Draw View
+
+        mSignatureView = (FreeDrawView) view.findViewById(R.id.your_id);
+
+        // Setup the View
+        mSignatureView.setPaintColor(Color.BLACK);
+        mSignatureView.setPaintWidthPx(getResources().getDimensionPixelSize(R.dimen.paint_width));
+        //mSignatureView.setPaintWidthPx(12);
+        mSignatureView.setPaintWidthDp(getResources().getDimension(R.dimen.paint_width));
+        //mSignatureView.setPaintWidthDp(6);
+        mSignatureView.setPaintAlpha(255);// from 0 to 255
+        mSignatureView.setResizeBehaviour(ResizeBehaviour.CROP);// Must be one of ResizeBehaviour
+        // values;
+
+        // This listener will be notified every time the path done and undone count changes
+        mSignatureView.setPathRedoUndoCountChangeListener(new PathRedoUndoCountChangeListener() {
+            @Override
+            public void onUndoCountChanged(int undoCount) {
+                // The undoCount is the number of the paths that can be undone
+            }
+
+            @Override
+            public void onRedoCountChanged(int redoCount) {
+                // The redoCount is the number of path removed that can be redrawn
+            }
+        });
+        // This listener will be notified every time a new path has been drawn
+        mSignatureView.setOnPathDrawnListener(new PathDrawnListener() {
+            @Override
+            public void onNewPathDrawn() {
+
+            }
+        });
+
+        // This will take a screenshot of the current drawn content of the view
+        mSignatureView.getDrawScreenshot(new FreeDrawView.DrawCreatorListener() {
+            @Override
+            public void onDrawCreated(Bitmap draw) {
+                // The draw Bitmap is the drawn content of the View
+            }
+
+            @Override
+            public void onDrawCreationError() {
+                // Something went wrong creating the bitmap, should never
+                // happen unless the async task has been canceled
+            }
+        });
+
+        Button mBtnUndo = (Button) view.findViewById(R.id.btn_undo);
+        Button mBtnRedo = (Button) view.findViewById(R.id.btn_redo);
+        Button mBtnRandomColor = (Button) view.findViewById(R.id.btn_color);
+        mBtnUndo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSignatureView.undoLast();
+            }
+        });
+        mBtnRedo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSignatureView.redoLast();
+            }
+        });
+        mBtnRandomColor.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeColor();
+            }
+        });
+        //FreeDraw view Code ends here
 
 
         btn.setOnClickListener(new OnClickListener() {
@@ -71,7 +148,6 @@ public class a extends Fragment {
 				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
-
                 trans.commit();
             }
         });
@@ -94,7 +170,6 @@ public class a extends Fragment {
 				 */
                 trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 trans.addToBackStack(null);
-
                 trans.commit();
             }
         });
@@ -132,6 +207,12 @@ public class a extends Fragment {
         } );
         return view;
     }
+    private void changeColor() {
+        Random rnd = new Random();
+        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+        mSignatureView.setPaintColor(color);
 
+        //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
+    }
 
 }

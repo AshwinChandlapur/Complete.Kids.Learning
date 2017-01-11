@@ -1,9 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2e2e2e"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -13,7 +12,7 @@
         android:gravity="center_horizontal"
         android:text="H\t h \nHorse"
         android:textColor="#ffffff"
-        android:textSize="45dp"
+        android:textSize="30dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -55,8 +54,61 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/h"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/drawboard"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/drawboard"
+        android:text="Drawboard"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/your_id"/>
+    <com.rm.freedraw.FreeDrawView
+        android:id="@+id/your_id"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="#ffe0b2"
+
+        app:paintAlpha="255"
+        app:paintColor="#ffffff"
+        app:paintWidth="4dp"
+        app:resizeBehaviour="crop"
+        android:layout_above="@+id/btn_undo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Undo"
+        android:textColor="#ffffff"
+        android:id="@+id/btn_undo"
+        android:layout_above="@+id/btn1o1"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Color"
+        android:textSize="10dp"
+        android:textColor="#ffffff"
+        android:id="@+id/btn_color"
+        android:layout_toRightOf="@id/btn_undo"
+        android:layout_toLeftOf="@+id/btn_redo"
+        android:layout_alignTop="@id/btn_undo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redo"
+        android:textColor="#ffffff"
+        android:id="@+id/btn_redo"
+        android:layout_below="@+id/your_id"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
 
 </RelativeLayout>

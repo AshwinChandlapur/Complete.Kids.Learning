@@ -32,4 +32,5 @@ dependencies {
     compile 'com.pushbots:pushbots-lib:2.0.13@aar'
     compile 'com.github.javiersantos:MaterialStyledDialogs:1.5.5'
     compile 'com.synnapps:carouselview:0.0.9'
+    compile 'com.rm:freedrawview:1.0.0'
 }
