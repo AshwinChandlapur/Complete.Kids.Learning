@@ -7,11 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-
-
 public class MainScroller extends AppCompatActivity {
 
 
@@ -69,6 +64,7 @@ public class MainScroller extends AppCompatActivity {
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
+
 
     public void credits(View view)
     {

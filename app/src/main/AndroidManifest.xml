@@ -130,7 +130,8 @@
 
         <activity android:name=".BodymaActivity" />
         <activity android:name=".NumberActivity" />
-        <activity android:name=".NotifHandler"></activity>
+        <activity android:name=".NotifHandler" />
+        <activity android:name=".SmartSlate"></activity>
     </application>
 
 </manifest>

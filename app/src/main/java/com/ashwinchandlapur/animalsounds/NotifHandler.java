@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -16,10 +17,7 @@ import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-
-
-
-
+import com.squareup.picasso.Picasso;
 
 
 public class NotifHandler extends AppCompatActivity {
@@ -107,9 +105,10 @@ public class NotifHandler extends AppCompatActivity {
                 ) {
             TextView message = (TextView) findViewById(R.id.message);
             message.setTypeface(myFont);
-            // TextView imgUrl = (TextView) findViewById(R.id.imgUrl);
-            // ImageView imgView=(ImageView)findViewById(R.id.imgView);
             message.setText(extras.getString("bigText"));
+            ImageView imgView=(ImageView)findViewById(R.id.imgView);
+            String sr= extras.getString("imgUrl");
+            Picasso.with(this).load(sr).into(imgView);
 
             //imgUrl.setText(extras.getString("imgUrl"));
             // Picasso.with(this).load(String.valueOf(imgUrl)).into(imgView);}
