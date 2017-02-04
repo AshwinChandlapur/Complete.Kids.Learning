@@ -35,7 +35,11 @@
         android:layout_below="@+id/heading"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
-        android:paddingTop="5px"/>
+        android:paddingTop="5px"
+        android:minWidth="700dp"
+        android:minHeight="180dp"
+        android:maxWidth="700dp"
+        android:maxHeight="180dp"/>
 
     <ScrollView
         android:layout_width="wrap_content"
