@@ -49,7 +49,7 @@ public class z extends Fragment {
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1o1);
         ImageButton home=(ImageButton)view.findViewById(R.id.home);
         // Button btn = (Button) view.findViewById(R.id.btn);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
         interstitial = new InterstitialAd(getActivity());
 // Insert the Ad Unit ID
         interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));

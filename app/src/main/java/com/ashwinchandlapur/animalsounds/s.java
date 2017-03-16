@@ -45,7 +45,7 @@ public class s extends Fragment {
         View view = inflater.inflate(R.layout.fragment_s, container, false);
 
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
 
         // Prepare the Interstitial Ad
         interstitial = new InterstitialAd(getActivity());

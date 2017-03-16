@@ -17,6 +17,7 @@ import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.squareup.picasso.Picasso;
 
 
@@ -41,13 +42,20 @@ public class NotifHandler extends AppCompatActivity {
         Button feedback=(Button)findViewById(R.id.feedback) ;
 
 
+        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
+
+        AdRequest request = new AdRequest.Builder()
+                .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+                .build();
+        adView.loadAd(request);
+
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 //interstial ad space
-                AdRequest adRequests = new AdRequest.Builder().build();
+                AdRequest adRequests = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
                 // Prepare the Interstitial Ad
                 interstitial = new InterstitialAd(NotifHandler.this);
 // Insert the Ad Unit ID

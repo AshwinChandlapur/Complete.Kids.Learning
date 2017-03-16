@@ -9,14 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.WindowManager;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-
 
 public class BodyActivity extends AppCompatActivity {
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     // For this example, only two pages
     static final int NUM_ITEMS = 2;
 

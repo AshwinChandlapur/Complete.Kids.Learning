@@ -34,7 +34,7 @@ public class OceanFragment6 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.ocean6_fragment, container, false);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
 
         // Prepare the Interstitial Ad
         interstitial = new InterstitialAd(getActivity());

@@ -14,13 +14,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
-
 
 public class WildFragment7 extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     private static final String TAG = "FirstFragment";
 
 

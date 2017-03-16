@@ -9,12 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import com.google.android.gms.ads.InterstitialAd;
-
 
 public class OceanActivity extends AppCompatActivity {
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     // For this example, only two pages
     static final int NUM_ITEMS = 1;
 

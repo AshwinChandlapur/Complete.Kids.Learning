@@ -1,4 +1,5 @@
 package com.ashwinchandlapur.animalsounds;
+
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -13,13 +14,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
-
 
 public class OceanFragment3 extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     //private static final String TAG = "FirstFragment";
 
 

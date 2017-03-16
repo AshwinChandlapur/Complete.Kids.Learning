@@ -32,10 +32,13 @@ public class body extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.body_fragment, container, false);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().
+                addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+                .build();
 
         // Prepare the Interstitial Ad
         interstitial = new InterstitialAd(getActivity());
+
 // Insert the Ad Unit ID
         interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
 

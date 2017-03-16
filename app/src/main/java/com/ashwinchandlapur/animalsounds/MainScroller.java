@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.ToggleButton;
-
-import com.pushbots.push.Pushbots;
 
 
 public class MainScroller extends AppCompatActivity {
@@ -24,14 +20,14 @@ public class MainScroller extends AppCompatActivity {
 
 
 //Toggle notification button
-        ToggleButton toggle = (ToggleButton) findViewById(R.id.toggle);
+       // ToggleButton toggle = (ToggleButton) findViewById(R.id.toggle);
 //Set checked status
-        toggle.setChecked(Pushbots.sharedInstance().isNotificationEnabled());
-        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Pushbots.sharedInstance().toggleNotifications(isChecked);
-            }
-        });
+      //  toggle.setChecked(Pushbots.sharedInstance().isNotificationEnabled());
+       // toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+         //   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+       //         Pushbots.sharedInstance().toggleNotifications(isChecked);
+      //      }
+       // });
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

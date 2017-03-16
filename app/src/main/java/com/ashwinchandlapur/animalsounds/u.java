@@ -17,7 +17,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
 import com.rm.freedraw.FreeDrawView;
 import com.rm.freedraw.PathDrawnListener;
 import com.rm.freedraw.PathRedoUndoCountChangeListener;
@@ -28,8 +27,7 @@ import java.util.Random;
 
 public class u extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     FreeDrawView mSignatureView;
     //private static final String TAG = "FirstFragment";
 

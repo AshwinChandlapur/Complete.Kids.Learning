@@ -15,14 +15,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
-
 
 public class PetFragment1 extends Fragment {
     TextView t;
     Context context;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     //private static final String TAG = "FirstFragment";
 
 
