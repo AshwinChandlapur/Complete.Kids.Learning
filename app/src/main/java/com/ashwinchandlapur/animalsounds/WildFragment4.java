@@ -78,7 +78,7 @@ public class WildFragment4 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frames, new WildFragment5());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -101,7 +101,7 @@ public class WildFragment4 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frames, new WildFragment3());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back

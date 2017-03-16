@@ -1,4 +1,5 @@
 package com.ashwinchandlapur.animalsounds;
+
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -13,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -62,7 +62,7 @@ public class OceanFragment2 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new OceanFragment3());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -85,7 +85,7 @@ public class OceanFragment2 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new OceanFragment1());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back

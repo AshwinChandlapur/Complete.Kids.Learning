@@ -30,6 +30,7 @@ public class c extends Fragment {
     TextView t;
     InterstitialAd mInterstitialAd;
     FreeDrawView mSignatureView;
+    MediaPlayer sound;
     private InterstitialAd interstitial;
     //private static final String TAG = "FirstFragment";
 
@@ -47,6 +48,17 @@ public class c extends Fragment {
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1o1);
         ImageButton home=(ImageButton)view.findViewById(R.id.home);
         // Button btn = (Button) view.findViewById(R.id.btn);
+
+       /* try {
+            sound = new MediaPlayer();
+            sound.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            sound.setDataSource("https://raw.githubusercontent.com/AshwinChandlapur/Complete.Kids.Learning/master/app/src/main/res/raw/c.wav");
+            sound.prepare();
+            sound.start();
+        } catch (Exception e) {
+           Toast toast= Toast.makeText(getActivity(),"Connect to Internet",Toast.LENGTH_SHORT);
+            toast.show();
+        }*/
         final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.c);
         sound.start();
 
@@ -139,6 +151,7 @@ public class c extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new d());
                 sound.stop();
+                sound.release();
 
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -164,6 +177,7 @@ public class c extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new b());
                 sound.stop();
+                sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -180,6 +194,7 @@ public class c extends Fragment {
             @Override
             public void onClick(View v) {
                 sound.pause();
+                sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -197,6 +212,7 @@ public class c extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     sound.pause();
+                    //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;

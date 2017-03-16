@@ -129,6 +129,7 @@ public class body extends Fragment {
             @Override
             public void onClick(View v) {
                 hair.start();
+
             }
         });
         eyebrows.setOnClickListener(new OnClickListener() {

@@ -60,6 +60,7 @@ public class NumberFragment1 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new NumberFragment2());
                 sound.stop();
+                sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -83,6 +84,7 @@ public class NumberFragment1 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new NumberFragment10());
                 sound.stop();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -99,6 +101,7 @@ public class NumberFragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 sound.pause();
+                sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }

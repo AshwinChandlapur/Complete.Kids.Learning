@@ -161,7 +161,7 @@ public class f extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new g());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -185,7 +185,7 @@ public class f extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new e());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -202,6 +202,7 @@ public class f extends Fragment {
             @Override
             public void onClick(View v) {
                 sound.pause();
+                sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -219,6 +220,7 @@ public class f extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     sound.pause();
+                    //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;

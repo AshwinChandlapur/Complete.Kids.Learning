@@ -71,6 +71,13 @@
             android:layout_centerHorizontal="true"
             android:onClick="numbers" />
 
+        <ToggleButton android:id="@+id/toggle"
+            android:textOff="Receiving notifications disabled."
+            android:textOn="Receiving notifications enabled."
+            android:textColor="#ffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
 
         <TextView
             android:layout_width="match_parent"

@@ -79,7 +79,7 @@ public class YbirdFragment4 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_framey, new YbirdFragment5());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -102,7 +102,7 @@ public class YbirdFragment4 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_framey, new YbirdFragment3());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back

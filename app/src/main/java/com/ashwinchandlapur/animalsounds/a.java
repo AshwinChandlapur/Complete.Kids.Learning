@@ -17,7 +17,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
 import com.rm.freedraw.FreeDrawView;
 import com.rm.freedraw.PathDrawnListener;
 import com.rm.freedraw.PathRedoUndoCountChangeListener;
@@ -28,8 +27,6 @@ import java.util.Random;
 
 public class a extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
     FreeDrawView mSignatureView;
     //private static final String TAG = "FirstFragment";
 
@@ -142,6 +139,7 @@ public class a extends Fragment {
                 trans.replace(R.id.root_frameo, new b());
                // sound.release();
                 sound.stop();
+                sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -164,6 +162,7 @@ public class a extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new z());
                 sound.stop();
+                sound.release();
 
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -181,6 +180,7 @@ public class a extends Fragment {
             @Override
             public void onClick(View v) {
                 sound.pause();
+                sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
@@ -199,6 +199,7 @@ public class a extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     sound.pause();
+                    //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);

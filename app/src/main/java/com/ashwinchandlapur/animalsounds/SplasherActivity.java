@@ -1,13 +1,11 @@
 package com.ashwinchandlapur.animalsounds;
 
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -30,7 +28,10 @@ public class SplasherActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splasher);
 
-        Pushbots.sharedInstance().init(this);
+
+        Pushbots.sharedInstance().registerForRemoteNotifications();
+        Pushbots.sharedInstance().setCustomHandler(CustomHandler.class);
+        //Pushbots.sharedInstance().init(this);
         Animation anim= AnimationUtils.loadAnimation(this,R.anim.move_up);
         ImageView img=(ImageView)findViewById(R.id.logo);
         img.setAnimation(anim);
@@ -40,11 +41,11 @@ public class SplasherActivity extends AppCompatActivity {
       //  t1 = (TextView) findViewById(R.id.tvs);
 
 
-        final SharedPreferences sharedPreferences = getSharedPreferences("FeedbackSettings", Context.MODE_PRIVATE);
+        /*final SharedPreferences sharedPreferences = getSharedPreferences("FeedbackSettings", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putInt("nameSet", 0);
-        editor.commit();
+        editor.commit();*/
 
 
         Typeface myFont = Typeface.createFromAsset(this.getAssets(), "fonts/Kaushan.otf" );

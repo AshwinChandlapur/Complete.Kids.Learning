@@ -139,6 +139,7 @@ public class e extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new f());
                 sound.stop();
+                sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -163,6 +164,7 @@ public class e extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new d());
                 sound.stop();
+                sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -179,6 +181,7 @@ public class e extends Fragment {
             @Override
             public void onClick(View v) {
                 sound.pause();
+                sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -196,6 +199,7 @@ public class e extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     sound.pause();
+                   // sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;

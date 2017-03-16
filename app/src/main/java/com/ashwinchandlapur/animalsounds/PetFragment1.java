@@ -61,7 +61,7 @@ public class PetFragment1 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_framep, new PetFragment2());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -84,7 +84,7 @@ public class PetFragment1 extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_framep, new PetFragment5());
-                sound.stop();
+                sound.stop();sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back

@@ -25,6 +25,9 @@ public class NotifHandler extends AppCompatActivity {
 
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
+    ImageView imgView;
+    String sr,messageTitle,savesd;
+    String storage = ".jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,19 +103,56 @@ public class NotifHandler extends AppCompatActivity {
         });
 
         // extras.getString("imgUrl");
-        if (null != extras && getIntent().getExtras().containsKey("message") || getIntent().getExtras().containsKey("imgUrl")
+        if (null != extras && getIntent().getExtras().containsKey("message") || getIntent().getExtras().containsKey("bigPicture")
                 ||getIntent().getExtras().containsKey("bigText")
                 ) {
             TextView message = (TextView) findViewById(R.id.message);
             message.setTypeface(myFont);
             message.setText(extras.getString("bigText"));
-            ImageView imgView=(ImageView)findViewById(R.id.imgView);
-            String sr= extras.getString("imgUrl");
+            imgView=(ImageView)findViewById(R.id.imgView);
+            sr= extras.getString("bigPicture");
             Picasso.with(this).load(sr).into(imgView);
-
+            messageTitle = extras.getString("message");
             //imgUrl.setText(extras.getString("imgUrl"));
             // Picasso.with(this).load(String.valueOf(imgUrl)).into(imgView);}
         }
+
+        savesd=messageTitle+storage;
+        //Download Images
+
+       /* BitmapDrawable drawable = (BitmapDrawable) imgView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+        File sdCardDirectory = new File("/sdcard/KidsLearning/");
+        sdCardDirectory.mkdirs();
+        //File sdCardDirectory = Environment.getExternalStorageDirectory();
+        File image = new File(sdCardDirectory, savesd);
+        MediaScannerConnection.scanFile(this, new String[] { image.getPath() }, new String[] { "image/jpeg" }, null);
+        boolean success = false;
+
+        // Encode the file as a PNG image.
+        FileOutputStream outStream;
+        try {
+
+            outStream = new FileOutputStream(image);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+
+
+            outStream.flush();
+            outStream.close();
+            success = true;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }if (success) {
+            Toast.makeText(getApplicationContext(), "Image saved with success",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Error during image saving", Toast.LENGTH_LONG).show();
+        }
+*/
+        //Download Images Code  ends here
 
     }
 
