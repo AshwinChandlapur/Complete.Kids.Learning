@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+
 
 public class MainScroller extends AppCompatActivity {
 
@@ -16,7 +19,12 @@ public class MainScroller extends AppCompatActivity {
         setContentView(R.layout.activity_main_scroller);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
 
+        AdRequest request = new AdRequest.Builder()
+                //.addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+                .build();
+        adView.loadAd(request);
 
 
 

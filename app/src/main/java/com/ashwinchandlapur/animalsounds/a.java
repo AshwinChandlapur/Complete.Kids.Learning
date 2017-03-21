@@ -69,6 +69,7 @@ public class a extends Fragment {
 
         mSignatureView = (FreeDrawView) view.findViewById(R.id.your_id);
 
+
         // Setup the View
         mSignatureView.setPaintColor(Color.BLACK);
         mSignatureView.setPaintWidthPx(getResources().getDimensionPixelSize(R.dimen.paint_width));

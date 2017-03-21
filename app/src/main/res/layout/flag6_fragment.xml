@@ -54,6 +54,7 @@
         android:id="@+id/imageView2"
         android:src="@drawable/canada"
         android:layout_above="@+id/info"
+        android:background="@null"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv" />
 
@@ -64,9 +65,10 @@
         android:layout_centerVertical="true"
         android:textColor="#ffffff"
         android:gravity="center"
-        android:text="Capital : Ottawa \n Population : 35,295,770 \n "
+        android:text="Capital : Ottawa \n Population : 35,295,770  "
         android:id="@+id/info"
         android:textSize="20sp"/>
+
 
 
 </RelativeLayout>
