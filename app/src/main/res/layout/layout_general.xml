@@ -60,6 +60,8 @@
                 android:id="@+id/message"
                 android:text="message"
                 />
+
+
             <com.google.android.gms.ads.NativeExpressAdView
                 android:id="@+id/adView"
                 android:layout_width="280dp"
@@ -70,6 +72,7 @@
                 ads:adUnitId="@string/native_ad_id"
                 ads:adSize="280x250">
             </com.google.android.gms.ads.NativeExpressAdView>
+
 
         </LinearLayout>
     </ScrollView>

@@ -71,6 +71,22 @@
             android:layout_centerHorizontal="true"
             android:onClick="numbers" />
 
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/flags"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:id="@+id/flags"
+            android:layout_below="@+id/numbers"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:onClick="flags"
+            />
+
 
        <!-- <ToggleButton android:id="@+id/toggle"
             android:textOff="Receiving notifications disabled."

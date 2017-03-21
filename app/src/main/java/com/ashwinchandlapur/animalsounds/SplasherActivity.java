@@ -2,7 +2,6 @@ package com.ashwinchandlapur.animalsounds;
 
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -13,12 +12,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.pushbots.push.Pushbots;
 
 
 public class SplasherActivity extends AppCompatActivity {
 
     TextView t, t1;
+    private FirebaseAnalytics mFirebaseAnalytics;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +30,11 @@ public class SplasherActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splasher);
 
-
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Pushbots.sharedInstance().registerForRemoteNotifications();
+        Pushbots.sharedInstance().setAlias("ashwin");
         Pushbots.sharedInstance().setCustomHandler(CustomHandler.class);
+
         //Pushbots.sharedInstance().init(this);
         Animation anim= AnimationUtils.loadAnimation(this,R.anim.move_up);
         ImageView img=(ImageView)findViewById(R.id.logo);
@@ -48,7 +52,7 @@ public class SplasherActivity extends AppCompatActivity {
         editor.commit();*/
 
 
-        Typeface myFont = Typeface.createFromAsset(this.getAssets(), "fonts/Kaushan.otf" );
+       // Typeface myFont = Typeface.createFromAsset(this.getAssets(), "fonts/Kaushan.otf" );
         // t.setTypeface(myFont);
         new Handler().postDelayed(new Runnable() {
             @Override

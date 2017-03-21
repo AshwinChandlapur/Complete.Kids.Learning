@@ -2,7 +2,6 @@ package com.ashwinchandlapur.animalsounds;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
@@ -105,16 +104,7 @@ public class body extends Fragment {
 
 
 
-        final MediaPlayer hair= MediaPlayer.create(view.getContext(),R.raw.hair);
-        final MediaPlayer eyebrow= MediaPlayer.create(view.getContext(),R.raw.eyebrows);
-        final MediaPlayer nose= MediaPlayer.create(view.getContext(),R.raw.nose);
-        final MediaPlayer mouth= MediaPlayer.create(view.getContext(),R.raw.mouth);
-        final MediaPlayer finger= MediaPlayer.create(view.getContext(),R.raw.finger);
-        final MediaPlayer eyes= MediaPlayer.create(view.getContext(),R.raw.eyes);
-        final MediaPlayer ears= MediaPlayer.create(view.getContext(),R.raw.ears);
-        final MediaPlayer neck= MediaPlayer.create(view.getContext(),R.raw.neck);
-        final MediaPlayer hands= MediaPlayer.create(view.getContext(),R.raw.hands);
-        final MediaPlayer legs= MediaPlayer.create(view.getContext(),R.raw.legs);
+
 
 
         //ear.start();
@@ -128,67 +118,7 @@ public class body extends Fragment {
 
 
 
-        hairs.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hair.start();
 
-            }
-        });
-        eyebrows.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                eyebrow.start();
-            }
-        });
-        noses.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nose.start();
-            }
-        });
-        mouths.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mouth.start();
-            }
-        });
-        fingerss.setOnClickListener(new OnClickListener() {
-            @Override
-           public void onClick(View v) {
-                finger.start();}
-       });
-        eyess.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                eyes.start();
-            }
-        });
-        earss.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ears.start();
-            }
-        });
-        necks.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                neck.start();
-            }
-        });
-
-        handss.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hands.start();
-            }
-        });
-        legss.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                legs.start();
-            }
-        });
 
        /* btn.setOnClickListener(new OnClickListener() {
 

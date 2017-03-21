@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "945092406779",
+    "firebase_url": "https://kids-learning-143817.firebaseio.com",
+    "project_id": "kids-learning-143817",
+    "storage_bucket": "kids-learning-143817.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945092406779:android:c5fca33f7edb9697",
+        "android_client_info": {
+          "package_name": "com.ashwinchandlapur.animalsounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945092406779-0hchkllpdhpl852fpvb275dvph4daj1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgaovO3JBf825mICZmi9gcVlGWN0flDFc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

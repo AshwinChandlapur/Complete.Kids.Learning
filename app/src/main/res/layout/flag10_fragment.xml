@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#5C6BC0"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="China"
+        android:textColor="#2c3e50"
+        android:textSize="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/btno1"
+        android:src="@drawable/next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/btn1o1"
+        android:src="@drawable/next1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:src="@drawable/home"
+        android:background="@null"
+        android:layout_alignBottom="@+id/btn1o1"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/china"
+        android:layout_above="@+id/info"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="Capital : Beijing \n  Population : 1,363,350,000"
+        android:id="@+id/info"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

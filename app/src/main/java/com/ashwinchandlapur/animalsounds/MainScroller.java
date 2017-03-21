@@ -19,15 +19,6 @@ public class MainScroller extends AppCompatActivity {
 
 
 
-//Toggle notification button
-       // ToggleButton toggle = (ToggleButton) findViewById(R.id.toggle);
-//Set checked status
-      //  toggle.setChecked(Pushbots.sharedInstance().isNotificationEnabled());
-       // toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-         //   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-       //         Pushbots.sharedInstance().toggleNotifications(isChecked);
-      //      }
-       // });
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +60,13 @@ public class MainScroller extends AppCompatActivity {
     public void numbers(View view)
     {
         Intent intent=new Intent(MainScroller.this,NumberActivity.class);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    public void flags(View view)
+    {
+        Intent intent=new Intent(MainScroller.this,FlagsActivity.class);
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

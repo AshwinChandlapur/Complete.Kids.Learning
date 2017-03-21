@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
@@ -16,18 +16,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rm.freedraw.FreeDrawView;
 import com.rm.freedraw.PathDrawnListener;
 import com.rm.freedraw.PathRedoUndoCountChangeListener;
 import com.rm.freedraw.ResizeBehaviour;
 
+import java.util.Locale;
 import java.util.Random;
 
 
 public class a extends Fragment {
     TextView t;
     FreeDrawView mSignatureView;
+    TextToSpeech tts;
     //private static final String TAG = "FirstFragment";
 
 
@@ -45,14 +48,22 @@ public class a extends Fragment {
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1o1);
         ImageButton home=(ImageButton)view.findViewById(R.id.home);
         // Button btn = (Button) view.findViewById(R.id.btn);
-        final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.a);
-        sound.start();
+        //final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.a);
+        //sound.start();
 
 
         t=(TextView)view.findViewById(R.id.tv);
-
         Typeface myFont = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Kaushan.otf");
         t.setTypeface(myFont);
+
+// TTS Engine
+        String toSpeak = t.getText().toString();
+        //Toast.makeText(getActivity().getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+        StartSpeak(toSpeak);
+//TTS Engine End
+
+
+
 
 //Free Draw View
 
@@ -137,9 +148,11 @@ public class a extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new b());
+                tts.stop();
+                tts.shutdown();
                // sound.release();
-                sound.stop();
-                sound.release();
+                //sound.stop();
+               // sound.release();
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -161,8 +174,10 @@ public class a extends Fragment {
 				 * "root_fragment.xml" as the reference to replace fragment
 				 */
                 trans.replace(R.id.root_frameo, new z());
-                sound.stop();
-                sound.release();
+                tts.stop();
+                tts.shutdown();
+                //sound.stop();
+              //  sound.release();
 
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -179,8 +194,10 @@ public class a extends Fragment {
         home.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                sound.pause();
-                sound.release();
+                tts.stop();
+                tts.shutdown();
+               // sound.pause();
+              //  sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
@@ -198,7 +215,9 @@ public class a extends Fragment {
             {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
-                    sound.pause();
+                    tts.stop();
+                    tts.shutdown();
+                  //  sound.pause();
                     //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -217,5 +236,33 @@ public class a extends Fragment {
 
         //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
     }
+
+    private void StartSpeak(final String data) {
+
+        tts=new TextToSpeech(getActivity().getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int initStatus) {
+                if (initStatus == TextToSpeech.SUCCESS) {
+                    if(tts.isLanguageAvailable(Locale.US)==TextToSpeech.LANG_AVAILABLE)
+                        tts.setLanguage(Locale.US);
+                    tts.setPitch(1.1f);
+                    tts.setSpeechRate(0.85f);
+                    // start speak
+                    speakWords(data);
+                }
+                else if (initStatus == TextToSpeech.ERROR) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Sorry! Text To Speech failed...", Toast.LENGTH_LONG).show();
+                }
+            }
+
+
+        });
+    }
+
+    private void speakWords(String speech) {
+        tts.speak("A for Apple", TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+
 
 }

@@ -1,8 +1,7 @@
 package com.ashwinchandlapur.animalsounds;
 
-import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.synnapps.carouselview.CarouselView;
@@ -13,8 +12,8 @@ public class BodymaActivity extends AppCompatActivity {
     CarouselView carouselView;
 
     int[] sampleImages = {R.drawable.bodyname, R.drawable.bodyname, R.drawable.frog, R.drawable.cat, R.drawable.dog};
-    int[] sampleSounds={R.raw.hair,R.raw.eyebrows,R.raw.nose,R.raw.mouth,R.raw.eyes};
-    MediaPlayer m = MediaPlayer.create(this, sampleSounds[0]);
+   // int[] sampleSounds={R.raw.hair,R.raw.eyebrows,R.raw.nose,R.raw.mouth,R.raw.eyes};
+   // MediaPlayer m = MediaPlayer.create(this, sampleSounds[0]);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

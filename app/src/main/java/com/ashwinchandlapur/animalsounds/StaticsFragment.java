@@ -1,18 +1,23 @@
 package com.ashwinchandlapur.animalsounds;
 
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Locale;
 
 
 public class StaticsFragment extends Fragment {
     TextView t,t1,t2,t3,t4,t5,t6,t7,t8;
+    TextToSpeech tts;
+    String nose,eyes,ears,mouth,hands,legs;
     private static final String TAG = "StaticFragment";
 
     @Override
@@ -39,15 +44,19 @@ public class StaticsFragment extends Fragment {
         t6.setTypeface(myFont);
         t7.setTypeface(myFont);
         t8.setTypeface(myFont);
+        // TTS Engine
+
+        nose = t1.getText().toString();
+        eyes = t2.getText().toString();
+        ears = t3.getText().toString();
+        mouth = t4.getText().toString();
+        hands = t5.getText().toString();
+        legs = t6.getText().toString();
 
 
 
-        final MediaPlayer isound= MediaPlayer.create(view.getContext(),R.raw.nose);
-        final MediaPlayer jsound= MediaPlayer.create(view.getContext(),R.raw.eyes);
-        final MediaPlayer ksound= MediaPlayer.create(view.getContext(),R.raw.ears);
-        final MediaPlayer lsound= MediaPlayer.create(view.getContext(),R.raw.mouth);
-        final MediaPlayer msound= MediaPlayer.create(view.getContext(),R.raw.hands);
-        final MediaPlayer nsound= MediaPlayer.create(view.getContext(),R.raw.legs);
+
+//TTS Engine End
 
 
         ImageButton i=(ImageButton)view.findViewById(R.id.noser);
@@ -60,42 +69,50 @@ public class StaticsFragment extends Fragment {
         i.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isound.start();
+                StartSpeak(nose);
             }
         });
 
         j.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jsound.start();
+               // jsound.start();
+                StartSpeak(eyes);
             }
         });
 
         k.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ksound.start();
+               // ksound.start();
+                StartSpeak(ears);
+
             }
         });
 
         l.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                lsound.start();
+                //lsound.start();
+                StartSpeak(mouth);
+
             }
         });
 
         m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                msound.start();
+                StartSpeak(hands);
+
+              //  msound.start();
             }
         });
 
         n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nsound.start();
+                StartSpeak(legs);
+                //nsound.start();
             }
         });
 
@@ -105,6 +122,32 @@ public class StaticsFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void StartSpeak(final String data) {
+
+        tts=new TextToSpeech(getActivity().getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int initStatus) {
+                if (initStatus == TextToSpeech.SUCCESS) {
+                    if(tts.isLanguageAvailable(Locale.US)==TextToSpeech.LANG_AVAILABLE)
+                        tts.setLanguage(Locale.US);
+                    tts.setPitch(1.1f);
+                    tts.setSpeechRate(0.85f);
+                    // start speak
+                    speakWords(data);
+                }
+                else if (initStatus == TextToSpeech.ERROR) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Sorry! Text To Speech failed...", Toast.LENGTH_LONG).show();
+                }
+            }
+
+
+        });
+    }
+
+    private void speakWords(String speech) {
+        tts.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
     }
 
 }
