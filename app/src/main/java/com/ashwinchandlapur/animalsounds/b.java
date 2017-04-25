@@ -24,13 +24,17 @@ import com.rm.freedraw.PathRedoUndoCountChangeListener;
 import com.rm.freedraw.ResizeBehaviour;
 
 import java.util.Locale;
-import java.util.Random;
+
+import petrov.kristiyan.colorpicker.ColorPicker;
 
 
 public class b extends Fragment {
     TextView t;
     FreeDrawView mSignatureView;
     TextToSpeech tts;
+    ColorPicker colorPicker;
+    View view;
+
     //private static final String TAG = "FirstFragment";
 
 
@@ -40,7 +44,16 @@ public class b extends Fragment {
 
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_b, container, false);
+
+       view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_b, container ,false);
+        //view= LayoutInflater.from(context).inflate(R.layout.layout, this, true);
+
+
+       // colorPicker = new ColorPicker(getContext());
+      //colorPicker = new ColorPicker(getActivity().getApplicationContext());
+
+       // colorPickers = new ColorPicker(getActivity());
+
 
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btno1);
@@ -113,7 +126,11 @@ public class b extends Fragment {
 
         Button mBtnUndo = (Button) view.findViewById(R.id.btn_undo);
         Button mBtnRedo = (Button) view.findViewById(R.id.btn_redo);
-        Button mBtnRandomColor = (Button) view.findViewById(R.id.btn_color);
+        final Button mBtnRandomColor = (Button) view.findViewById(R.id.btn_color);
+
+
+       //sam.invalidate();
+
         mBtnUndo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,11 +144,15 @@ public class b extends Fragment {
             }
         });
         mBtnRandomColor.setOnClickListener(new OnClickListener() {
-            @Override
+           @Override
             public void onClick(View view) {
-                changeColor();
-            }
-        });
+               changeColor();
+           }
+         });
+
+
+
+
         //FreeDraw view Code ends here
         btn.setOnClickListener(new OnClickListener() {
 
@@ -145,7 +166,7 @@ public class b extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new c());
                 tts.stop();
-                tts.shutdown();
+                //
                // sound.stop();
                // sound.release();
 				/*
@@ -171,7 +192,7 @@ public class b extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new a());
                 tts.stop();
-                tts.shutdown();
+               //
                 //sound.stop();
                 //sound.release();
 				/*
@@ -192,7 +213,7 @@ public class b extends Fragment {
             public void onClick(View v) {
                 //sound.pause();
                 tts.stop();
-                tts.shutdown();
+               //
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -210,7 +231,7 @@ public class b extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     tts.stop();
-                    tts.shutdown();
+                 //
                   //  sound.pause();
                     //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
@@ -220,15 +241,34 @@ public class b extends Fragment {
                 return false;
             }
         } );
+
         return view;
     }
-    private void changeColor() {
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        mSignatureView.setPaintColor(color);
 
-        //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
+    public void changeColor() {
+
+        colorPicker = new ColorPicker(getActivity());
+        colorPicker.show();
+        colorPicker.setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
+            @Override
+            public void onChooseColor(int position, int color) {
+                mSignatureView.setPaintColor(color);
+            }
+
+            @Override
+            public void onCancel() {
+                colorPicker.dismissDialog();
+            }
+        });
+
+
+      //  colorPicker.show();
+
+       // Random rnd = new Random();
+       // int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+       // mSignatureView.setPaintColor(color);
     }
+
 
     private void StartSpeak(final String data) {
 

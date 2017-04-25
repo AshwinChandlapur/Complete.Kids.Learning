@@ -70,7 +70,7 @@ public class FlagFragment6 extends Fragment {
                 //sound.stop();
                // sound.release();
                 tts.stop();
-                tts.shutdown();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -95,7 +95,7 @@ public class FlagFragment6 extends Fragment {
                 trans.replace(R.id.root_framen, new FlagFragment5());
               //  sound.stop();
                 tts.stop();
-                tts.shutdown();
+
 
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
@@ -115,7 +115,7 @@ public class FlagFragment6 extends Fragment {
                 //sound.pause();
                // sound.release();
                 tts.stop();
-                tts.shutdown();
+
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -134,7 +134,7 @@ public class FlagFragment6 extends Fragment {
                 {
                    // sound.pause();
                     tts.stop();
-                    tts.shutdown();
+
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;

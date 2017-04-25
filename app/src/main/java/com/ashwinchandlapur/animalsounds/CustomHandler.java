@@ -3,12 +3,9 @@ package com.ashwinchandlapur.animalsounds;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
 
-import com.pushbots.push.Pushbots;
-import com.pushbots.push.utils.PBConstants;
+//import com.pushbots.push.Pushbots;
+//import com.pushbots.push.utils.PBConstants;
 
 
 public class CustomHandler extends BroadcastReceiver
@@ -18,7 +15,7 @@ public class CustomHandler extends BroadcastReceiver
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        String action = intent.getAction();
+        /*String action = intent.getAction();
         Log.d(TAG, "action=" + action);
 
         // Handle Push Message when opened
@@ -75,7 +72,7 @@ public class CustomHandler extends BroadcastReceiver
             Bundle bundle = intent.getExtras().getBundle(PBConstants.EVENT_MSG_RECEIVE);
             Log.i(TAG, "User received notification with Message: " + bundle.get("message"));
 
-        }
+        }*/
 
     }
 }

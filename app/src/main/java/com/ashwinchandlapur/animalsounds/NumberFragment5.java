@@ -66,7 +66,7 @@ public class NumberFragment5 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new NumberFragment6());
                 tts.stop();
-                tts.shutdown();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -90,7 +90,7 @@ public class NumberFragment5 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new NumberFragment4());
                 tts.stop();
-                tts.shutdown();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -107,7 +107,7 @@ public class NumberFragment5 extends Fragment {
             @Override
             public void onClick(View v) {
                 tts.stop();
-                tts.shutdown();
+
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -125,7 +125,7 @@ public class NumberFragment5 extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     tts.stop();
-                    tts.shutdown();
+
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;

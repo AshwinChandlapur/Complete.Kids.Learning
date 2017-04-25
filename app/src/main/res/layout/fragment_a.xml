@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:background="#1dd2af"
     android:layout_height="match_parent">
 
@@ -69,7 +70,6 @@
         android:layout_width="match_parent"
         android:layout_height="185dp"
         android:background="#1de9b6"
-
         app:paintAlpha="255"
         app:paintColor="#ffffff"
         app:paintWidth="4dp"
@@ -99,6 +99,8 @@
         android:layout_toRightOf="@id/btn_undo"
         android:layout_toLeftOf="@+id/btn_redo"
         android:layout_alignTop="@id/btn_undo"/>
+
+
 
     <Button
         android:layout_width="wrap_content"

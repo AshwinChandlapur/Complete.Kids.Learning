@@ -24,13 +24,15 @@ import com.rm.freedraw.PathRedoUndoCountChangeListener;
 import com.rm.freedraw.ResizeBehaviour;
 
 import java.util.Locale;
-import java.util.Random;
+
+import petrov.kristiyan.colorpicker.ColorPicker;
 
 
 public class k extends Fragment {
     TextView t;
     FreeDrawView mSignatureView;
     TextToSpeech tts;
+    ColorPicker colorPicker;
     //private static final String TAG = "FirstFragment";
 
 
@@ -144,7 +146,7 @@ public class k extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new l());
                 tts.stop();
-                tts.shutdown();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -170,7 +172,7 @@ public class k extends Fragment {
                //trans.getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 trans.replace(R.id.root_frameo, new j());
                 tts.stop();
-                tts.shutdown();
+
 				/*
 				 * IMPORTANT: The following lines allow us to add the fragment
 				 * to the stack and return to it later, by pressing back
@@ -187,7 +189,7 @@ public class k extends Fragment {
             @Override
             public void onClick(View v) {
                 tts.stop();
-                tts.shutdown();
+
                 Intent intent=new Intent(getActivity(),MainScroller.class);
                 startActivity(intent);
             }
@@ -205,7 +207,7 @@ public class k extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     tts.stop();
-                    tts.shutdown();
+
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
                     return true;
@@ -215,13 +217,29 @@ public class k extends Fragment {
         } );
         return view;
     }
-    private void changeColor() {
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        mSignatureView.setPaintColor(color);
-        //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
-    }
+    public void changeColor() {
 
+        colorPicker = new petrov.kristiyan.colorpicker.ColorPicker(getActivity());
+        colorPicker.show();
+        colorPicker.setOnChooseColorListener(new petrov.kristiyan.colorpicker.ColorPicker.OnChooseColorListener() {
+            @Override
+            public void onChooseColor(int position, int color) {
+                mSignatureView.setPaintColor(color);
+            }
+
+            @Override
+            public void onCancel() {
+                colorPicker.dismissDialog();
+            }
+        });
+
+
+        //  colorPicker.show();
+
+        // Random rnd = new Random();
+        // int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+        // mSignatureView.setPaintColor(color);
+    }
     private void StartSpeak(final String data) {
 
         tts=new TextToSpeech(getActivity().getApplicationContext(), new TextToSpeech.OnInitListener() {

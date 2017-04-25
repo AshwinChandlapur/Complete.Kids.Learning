@@ -96,6 +96,8 @@
         android:textSize="10dp"
         android:textColor="#ffffff"
         android:id="@+id/btn_color"
+        android:onClick="changeColor"
+        android:clickable="true"
         android:layout_toRightOf="@id/btn_undo"
         android:layout_toLeftOf="@+id/btn_redo"
         android:layout_alignTop="@id/btn_undo"/>
@@ -109,5 +111,7 @@
         android:layout_below="@+id/your_id"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView" />
+
+
 
 </RelativeLayout>

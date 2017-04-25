@@ -10,6 +10,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 
 
+
 public class MainScroller extends AppCompatActivity {
 
 
@@ -25,7 +26,9 @@ public class MainScroller extends AppCompatActivity {
                 //.addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
                 .build();
         adView.loadAd(request);
-
+        //Pushbots.sharedInstance().registerForRemoteNotifications();
+       // Pushbots.sharedInstance().setAlias("ashwin");
+       // Pushbots.sharedInstance().setCustomHandler(CustomHandler.class);
 
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

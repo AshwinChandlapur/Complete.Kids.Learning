@@ -8,12 +8,15 @@ android {
         applicationId "com.ashwinchandlapur.animalsounds"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 9
-        versionName "3.2"
-        manifestPlaceholders = [manifestApplicationId: "${applicationId}",
-                                pushbots_app_id      : "57dece034a9efa86b68b4568",
-                                pushbots_loglevel    : "DEBUG",
-                                google_sender_id     : "945092406779"]
+        versionCode 10
+        versionName "3.21"
+        manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                pushbots_app_id                : "57dece034a9efa86b68b4568",
+                                pushbots_loglevel              : "DEBUG",
+                                google_sender_id               : "945092406779",
+                                onesignal_app_id               : "a44dbf52-7ee8-45c4-b475-957965778fda",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "945092406779"]
     }
     buildTypes {
         release {
@@ -23,9 +26,15 @@ android {
         }
     }
 }
+repositories {
+    maven { url "https://jitpack.io" }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Required for geotagging
+
 
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
@@ -34,10 +43,14 @@ dependencies {
     compile 'com.github.javiersantos:MaterialStyledDialogs:1.5.5'
     compile 'com.rm:freedrawview:1.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.pushbots:pushbots-lib:3.0.1@aar'
+    //compile 'com.pushbots:pushbots-lib:3.0.1@aar'
     compile 'com.google.android.gms:play-services-gcm:10.0.1'
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.android.support:support-v4:25.2.0'
+    compile 'petrov.kristiyan:colorpicker-library:1.1.4'
+    compile 'com.onesignal:OneSignal:3.+@aar'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -24,13 +24,16 @@ import com.rm.freedraw.PathRedoUndoCountChangeListener;
 import com.rm.freedraw.ResizeBehaviour;
 
 import java.util.Locale;
-import java.util.Random;
+
+import petrov.kristiyan.colorpicker.ColorPicker;
 
 
 public class a extends Fragment {
     TextView t;
     FreeDrawView mSignatureView;
     TextToSpeech tts;
+    ColorPicker colorPicker;
+
     //private static final String TAG = "FirstFragment";
 
 
@@ -43,13 +46,14 @@ public class a extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
 
 
-
         ImageButton btn=(ImageButton)view.findViewById(R.id.btno1);
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1o1);
         ImageButton home=(ImageButton)view.findViewById(R.id.home);
         // Button btn = (Button) view.findViewById(R.id.btn);
         //final MediaPlayer sound= MediaPlayer.create(view.getContext(),R.raw.a);
         //sound.start();
+
+
 
 
         t=(TextView)view.findViewById(R.id.tv);
@@ -68,7 +72,6 @@ public class a extends Fragment {
 //Free Draw View
 
         mSignatureView = (FreeDrawView) view.findViewById(R.id.your_id);
-
 
         // Setup the View
         mSignatureView.setPaintColor(Color.BLACK);
@@ -150,7 +153,7 @@ public class a extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new b());
                 tts.stop();
-                tts.shutdown();
+
                // sound.release();
                 //sound.stop();
                // sound.release();
@@ -176,7 +179,7 @@ public class a extends Fragment {
 				 */
                 trans.replace(R.id.root_frameo, new z());
                 tts.stop();
-                tts.shutdown();
+               //
                 //sound.stop();
               //  sound.release();
 
@@ -196,7 +199,7 @@ public class a extends Fragment {
             @Override
             public void onClick(View v) {
                 tts.stop();
-                tts.shutdown();
+               //
                // sound.pause();
               //  sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
@@ -217,7 +220,7 @@ public class a extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     tts.stop();
-                    tts.shutdown();
+                    //
                   //  sound.pause();
                     //sound.release();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
@@ -230,14 +233,30 @@ public class a extends Fragment {
         } );
         return view;
     }
-    private void changeColor() {
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        mSignatureView.setPaintColor(color);
 
-        //mSideView.setBackgroundColor(mFreeDrawView.getPaintColor());
+    public void changeColor() {
+
+        colorPicker = new petrov.kristiyan.colorpicker.ColorPicker(getActivity());
+        colorPicker.show();
+        colorPicker.setOnChooseColorListener(new petrov.kristiyan.colorpicker.ColorPicker.OnChooseColorListener() {
+            @Override
+            public void onChooseColor(int position, int color) {
+                mSignatureView.setPaintColor(color);
+            }
+
+            @Override
+            public void onCancel() {
+                colorPicker.dismissDialog();
+            }
+        });
+
+
+        //  colorPicker.show();
+
+        // Random rnd = new Random();
+        // int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+        // mSignatureView.setPaintColor(color);
     }
-
     private void StartSpeak(final String data) {
 
         tts=new TextToSpeech(getActivity().getApplicationContext(), new TextToSpeech.OnInitListener() {

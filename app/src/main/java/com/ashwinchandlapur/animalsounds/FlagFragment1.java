@@ -88,7 +88,7 @@ public class FlagFragment1 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new FlagFragment2());
                 tts.stop();
-                tts.shutdown();
+
                 //sound.stop();
                // sound.release();
 				/*
@@ -114,7 +114,7 @@ public class FlagFragment1 extends Fragment {
 				 */
                 trans.replace(R.id.root_framen, new FlagFragment11());
                 tts.stop();
-                tts.shutdown();
+
               //  sound.stop();
 
 				/*
@@ -133,7 +133,7 @@ public class FlagFragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 tts.stop();
-                tts.shutdown();
+
                 //sound.pause();
                // sound.release();
                 Intent intent=new Intent(getActivity(),MainScroller.class);
@@ -153,7 +153,7 @@ public class FlagFragment1 extends Fragment {
                 if( keyCode == KeyEvent.KEYCODE_BACK )
                 {
                     tts.stop();
-                    tts.shutdown();
+
                    // sound.pause();
                     Intent intent=new Intent(getActivity(),MainScroller.class);
                     startActivity(intent);
