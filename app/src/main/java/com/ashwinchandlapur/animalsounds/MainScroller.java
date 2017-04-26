@@ -22,9 +22,9 @@ public class MainScroller extends AppCompatActivity {
         setSupportActionBar(toolbar);
         NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
 
-        AdRequest request = new AdRequest.Builder()
+       AdRequest request = new AdRequest.Builder()
                 //.addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
-                .build();
+               .build();
         adView.loadAd(request);
         //Pushbots.sharedInstance().registerForRemoteNotifications();
        // Pushbots.sharedInstance().setAlias("ashwin");

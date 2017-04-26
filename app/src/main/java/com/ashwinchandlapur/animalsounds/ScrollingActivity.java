@@ -65,6 +65,7 @@ public class ScrollingActivity extends AppCompatActivity {
     public void pets(View view)
     {
         Intent intent=new Intent(ScrollingActivity.this,PetActivity.class);
+
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
@@ -72,6 +73,7 @@ public class ScrollingActivity extends AppCompatActivity {
     public void wild(View view)
     {
         Intent intent=new Intent(ScrollingActivity.this,WildActivity.class);
+
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
@@ -79,6 +81,7 @@ public class ScrollingActivity extends AppCompatActivity {
    public void farm(View view)
     {
         Intent intent=new Intent(ScrollingActivity.this,XarmActivity.class);
+
        // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
@@ -86,6 +89,7 @@ public class ScrollingActivity extends AppCompatActivity {
     public void bird(View view)
     {
         Intent intent=new Intent(ScrollingActivity.this,YbirdActivity.class);
+
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
@@ -93,6 +97,7 @@ public class ScrollingActivity extends AppCompatActivity {
    public void ocean(View view)
     {
         Intent intent=new Intent(ScrollingActivity.this,OceanActivity.class);
+
        // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
