@@ -2,9 +2,13 @@ package com.ashwinchandlapur.animalsounds;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -14,9 +18,22 @@ public class ScrollingActivity extends AppCompatActivity {
 
     InterstitialAd mInterstitialAd;
     private InterstitialAd interstitial;
+    int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+//        Thread thread = new Thread () {
+//            @Override
+//            public void run(){
+//
+//            }
+//        };thread.start();
+
+
+
 
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
 
@@ -39,9 +56,6 @@ public class ScrollingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
 
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -100,6 +114,13 @@ public class ScrollingActivity extends AppCompatActivity {
 
        // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+    }
+
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 
 

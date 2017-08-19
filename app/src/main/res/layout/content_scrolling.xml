@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3e3e3e"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ashwin.ashwinchandlapur.animalsounds.ScrollingActivity"
+    tools:context="com.ashwinchandlapur.animalsounds.ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/content_scrolling">
 
         <ImageButton
             android:layout_width="match_parent"
