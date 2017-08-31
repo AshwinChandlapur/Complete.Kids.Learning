@@ -1,12 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Declare custom theme attributes that allow changing which styles are
-         used for button bars depending on the API level.
-         ?android:attr/buttonBarStyle is new as of API 11 so this is
-         necessary to support previous API levels. -->
-    <declare-styleable name="ButtonBarContainerTheme">
-        <attr name="metaButtonBarStyle" format="reference" />
-        <attr name="metaButtonBarButtonStyle" format="reference" />
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface" format="enum">
+            <enum name="robotoBlack" value="0" />
+            <enum name="robotoBlackItalic" value="1" />
+            <enum name="robotoBold" value="2" />
+            <enum name="robotoBoldItalic" value="3" />
+            <enum name="robotoBoldCondensed" value="4" />
+            <enum name="robotoBoldCondensedItalic" value="5" />
+            <enum name="robotoCondensed" value="6" />
+            <enum name="robotoCondensedItalic" value="7" />
+            <enum name="robotoItalic" value="8" />
+            <enum name="robotoLight" value="9" />
+            <enum name="robotoLightItalic" value="10" />
+            <enum name="robotoMedium" value="11" />
+            <enum name="robotoMediumItalic" value="12" />
+            <enum name="robotoRegular" value="13" />
+            <enum name="robotoThin" value="14" />
+            <enum name="robotoThinItalic" value="15" />
+        </attr>
     </declare-styleable>
-
 </resources>

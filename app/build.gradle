@@ -8,8 +8,8 @@ android {
         applicationId "com.ashwinchandlapur.animalsounds"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 12
-        versionName "3.4"
+        versionCode 14
+        versionName "Mickey"
         manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
                                 onesignal_app_id               : "a44dbf52-7ee8-45c4-b475-957965778fda",
                                 // Project number pulled from dashboard, local value is ignored.
