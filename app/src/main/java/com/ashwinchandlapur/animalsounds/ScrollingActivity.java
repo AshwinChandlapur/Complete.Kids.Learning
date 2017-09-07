@@ -33,9 +33,14 @@ public class ScrollingActivity extends AppCompatActivity {
 //        };thread.start();
 
 
+        Bundle extras = new Bundle();
+        extras.putBoolean("is_designed_for_families", true);
 
-
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
+        AdRequest adRequest = new AdRequest.Builder()
+        .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+//                .addNetworkExtrasBundle(ScrollingActivity.class, extras)
+                .tagForChildDirectedTreatment(true)
+                .build();
 
         // Prepare the Interstitial Ad
         interstitial = new InterstitialAd(ScrollingActivity.this);

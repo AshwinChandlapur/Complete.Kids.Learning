@@ -20,15 +20,17 @@ public class MainScroller extends AppCompatActivity {
         setContentView(R.layout.activity_main_scroller);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
-
-
-
-
-       AdRequest request = new AdRequest.Builder()
-                //.addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
-               .build();
-        adView.loadAd(request);
+//        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
+//
+//
+//        Bundle extras = new Bundle();
+//        extras.putBoolean("is_designed_for_families", true);
+//
+//       AdRequest request = new AdRequest.Builder()
+//               .tagForChildDirectedTreatment(true)
+//                //.addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+//               .build();
+//        adView.loadAd(request);
 
     }
     @Override

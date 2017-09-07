@@ -29,18 +29,6 @@
             android:layout_centerHorizontal="true"
             android:onClick="alphabets" />
 
-        <com.google.android.gms.ads.NativeExpressAdView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_below="@id/alphabets"
-            android:layout_marginTop="2dp"
-            android:layout_gravity="center"
-            ads:adUnitId="@string/native_ad_id"
-            android:layout_above="@+id/animals"
-            android:background="@null"
-            ads:adSize="FULL_WIDTHx250">
-        </com.google.android.gms.ads.NativeExpressAdView>
 
         <ImageButton
             android:layout_width="match_parent"
@@ -51,7 +39,7 @@
             android:maxHeight="250dp"
             android:scaleType="fitCenter"
             android:clickable="true"
-            android:layout_below="@+id/adView"
+            android:layout_below="@+id/alphabets"
             android:id="@+id/animals"
             android:background="@null"
             android:layout_centerHorizontal="true"

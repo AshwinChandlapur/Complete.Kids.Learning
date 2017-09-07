@@ -33,24 +33,31 @@ public class PetFragment3 extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.pet3_fragment, container, false);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
 
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(getActivity());
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.95) {
-                    interstitial.show();
-                }
-
-            }
-        });
+//        Bundle extras = new Bundle();
+//        extras.putBoolean("is_designed_for_families", true);
+//
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addNetworkExtrasBundle(MainScroller.class, extras)
+//                .tagForChildDirectedTreatment(true)
+//                .build();
+//
+//        // Prepare the Interstitial Ad
+//        interstitial = new InterstitialAd(getActivity());
+//// Insert the Ad Unit ID
+//        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+//
+//        interstitial.loadAd(adRequest);
+//// Prepare an Interstitial Ad Listener
+//        interstitial.setAdListener(new AdListener() {
+//            public void onAdLoaded() {
+//// Call displayInterstitial() function
+//                if (interstitial.isLoaded() && Math.random()>0.95) {
+//                    interstitial.show();
+//                }
+//
+//            }
+//        });
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btnp3);
         ImageButton btn1=(ImageButton)view.findViewById(R.id.btn1p3);

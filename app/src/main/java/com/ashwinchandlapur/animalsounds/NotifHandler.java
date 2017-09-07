@@ -36,6 +36,7 @@ public class NotifHandler extends AppCompatActivity {
         setContentView(R.layout.layout_general);
 
 
+
         Typeface myFont = Typeface.createFromAsset(this.getAssets(),"fonts/Kaushan.otf");
         TextView heading=(TextView)findViewById(R.id.heading);
         heading.setTypeface(myFont);
@@ -45,7 +46,7 @@ public class NotifHandler extends AppCompatActivity {
         NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
 
         AdRequest request = new AdRequest.Builder()
-                .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+                .tagForChildDirectedTreatment(true)
                 .build();
         adView.loadAd(request);
 
@@ -55,7 +56,12 @@ public class NotifHandler extends AppCompatActivity {
             @Override
             public void run() {
                 //interstial ad space
-                AdRequest adRequests = new AdRequest.Builder().addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37").build();
+                Bundle extras = new Bundle();
+                extras.putBoolean("is_designed_for_families", true);
+
+                AdRequest adRequests = new AdRequest.Builder()
+                        .tagForChildDirectedTreatment(true)
+                        .build();
                 // Prepare the Interstitial Ad
                 interstitial = new InterstitialAd(NotifHandler.this);
 // Insert the Ad Unit ID
