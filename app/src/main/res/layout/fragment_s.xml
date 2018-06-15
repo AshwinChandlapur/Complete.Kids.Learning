@@ -1,114 +1,144 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#6BB9F0"
+    android:background="#FF448AFF"
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tv"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:text="S\t s \nShip"
-        android:textColor="#ffffff"
-        android:textSize="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:id="@+id/btno1"
-        android:src="@drawable/next"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:paddingRight="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp" />
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:id="@+id/btn1o1"
-        android:src="@drawable/next1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:paddingLeft="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/home"
-        android:src="@drawable/home"
-        android:background="@null"
-        android:layout_alignBottom="@+id/btn1o1"
-        android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/s"
-        android:layout_above="@+id/drawboard"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/drawboard"
-        android:text="Drawboard"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/your_id"/>
-    <com.rm.freedraw.FreeDrawView
-        android:id="@+id/your_id"
-        android:layout_width="match_parent"
-        android:layout_height="185dp"
-        android:background="#648df6"
 
-        app:paintAlpha="255"
-        app:paintColor="#ffffff"
-        app:paintWidth="4dp"
-        app:resizeBehaviour="crop"
-        android:layout_above="@+id/btn_undo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        />
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:text="S\t s \n Ship"
+                android:layout_margin="10dp"
+                android:textColor="#ffffff"
+                android:textSize="30dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Undo"
-        android:textColor="#ffffff"
-        android:id="@+id/btn_undo"
-        android:layout_above="@+id/btn1o1"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change Color"
-        android:textSize="10dp"
-        android:textColor="#ffffff"
-        android:id="@+id/btn_color"
-        android:layout_toRightOf="@id/btn_undo"
-        android:layout_toLeftOf="@+id/btn_redo"
-        android:layout_alignTop="@id/btn_undo"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="center"
+                android:src="@drawable/s" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Redo"
-        android:textColor="#ffffff"
-        android:id="@+id/btn_redo"
-        android:layout_below="@+id/your_id"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/drawboard"
+                android:layout_weight="0.03"
+                android:text="Drawboard"
+                android:layout_gravity="center" />
+
+            <com.rm.freedrawview.FreeDrawView
+                android:id="@+id/your_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.77"
+                android:background="#648df6"
+                app:paintAlpha="255"
+                app:paintColor="#ffffff"
+                app:paintWidth="4dp"
+                app:resizeBehaviour="crop"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Undo"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btn_undo"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Color"
+                    android:textSize="10dp"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btn_color" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redo"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btn_redo"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:id="@+id/btn1o1"
+                android:layout_weight="1"
+                android:src="@drawable/next1"
+                />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home"
+                android:src="@drawable/home"
+                android:layout_weight="1"
+                android:background="@null"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:id="@+id/btno1"
+                android:layout_weight="1"
+                android:src="@drawable/next" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

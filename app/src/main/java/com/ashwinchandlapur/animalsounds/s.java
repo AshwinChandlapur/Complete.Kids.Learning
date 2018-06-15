@@ -18,13 +18,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.rm.freedraw.FreeDrawView;
-import com.rm.freedraw.PathDrawnListener;
-import com.rm.freedraw.PathRedoUndoCountChangeListener;
-import com.rm.freedraw.ResizeBehaviour;
+
+import com.rm.freedrawview.FreeDrawView;
+import com.rm.freedrawview.PathDrawnListener;
+import com.rm.freedrawview.PathRedoUndoCountChangeListener;
+import com.rm.freedrawview.ResizeBehaviour;
 
 import java.util.Locale;
 
@@ -33,8 +31,6 @@ import petrov.kristiyan.colorpicker.ColorPicker;
 
 public class s extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
     FreeDrawView mSignatureView;
     TextToSpeech tts;
     ColorPicker colorPicker;
@@ -50,27 +46,6 @@ public class s extends Fragment {
         View view = inflater.inflate(R.layout.fragment_s, container, false);
 
 
-        AdRequest adRequest = new AdRequest.Builder()
-//                .addNetworkExtrasBundle(MainScroller.class, extras)
-                .tagForChildDirectedTreatment(true)
-                .build();
-
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(getActivity());
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                if (interstitial.isLoaded() && Math.random()>0.9) {
-                    interstitial.show();
-                }
-
-            }
-        });
 
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btno1);
@@ -119,6 +94,11 @@ public class s extends Fragment {
         });
         // This listener will be notified every time a new path has been drawn
         mSignatureView.setOnPathDrawnListener(new PathDrawnListener() {
+            @Override
+            public void onPathStart() {
+
+            }
+
             @Override
             public void onNewPathDrawn() {
 

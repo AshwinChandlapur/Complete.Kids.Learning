@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
+
 
 
 public class OceanFragment2 extends Fragment {
@@ -31,7 +31,7 @@ public class OceanFragment2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.ocean2_fragment, container, false);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+
 
 
         ImageButton btn=(ImageButton)view.findViewById(R.id.btno2);

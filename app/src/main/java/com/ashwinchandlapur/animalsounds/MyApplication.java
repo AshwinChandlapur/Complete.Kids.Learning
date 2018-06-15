@@ -2,6 +2,7 @@ package com.ashwinchandlapur.animalsounds;
 
 import android.app.Application;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 
 import com.onesignal.OSNotification;
@@ -19,7 +20,7 @@ public class MyApplication extends Application {
         OneSignal.startInit(this)
                 .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
                 .init();
-
+        
         // Call syncHashedEmail anywhere in your app if you have the user's email.
         // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
         // OneSignal.syncHashedEmail(userEmail);
@@ -32,10 +33,11 @@ public class MyApplication extends Application {
             JSONObject data = notification.payload.additionalData;
             String bigText;
             String imgUrl;
-
+            String launchUrl;
             if (data != null) {
                 bigText = data.optString("bigText", null);
                 imgUrl = data.optString("imgUrl",null);
+
                 if(bigText!=null && imgUrl!=null) {
                     Intent intent = new Intent(getApplicationContext(), oneSignal.class);
                     intent.putExtra("bigText", bigText);
@@ -47,6 +49,7 @@ public class MyApplication extends Application {
                     Log.i("OneSignalExample", "customkey set with value: " + bigText);
                 if (imgUrl != null)
                     Log.i("OneSignalExample", "customkey set with value: " + imgUrl);
+
                 data.remove(bigText);//This is mandatory, because the Old JSON data will still be stored that causes error while opening newest notification
                 data.remove(imgUrl);//
             }
@@ -64,10 +67,11 @@ public class MyApplication extends Application {
             JSONObject data = result.notification.payload.additionalData;
             String bigText;
             String imgUrl;
-
+            String launchUrl;
             if (data != null) {
                 bigText = data.optString("bigText", null);
                 imgUrl = data.optString("imgUrl",null);
+                launchUrl = data.optString("launchUrl",null);
                 if(bigText!=null && imgUrl!=null) {
                     Intent intent = new Intent(getApplicationContext(), oneSignal.class);
                     intent.putExtra("bigText", bigText);
@@ -79,6 +83,10 @@ public class MyApplication extends Application {
                     Log.i("OneSignalExample", "customkey set with value: " + bigText);
                 if (imgUrl != null)
                     Log.i("OneSignalExample", "customkey set with value: " + imgUrl);
+                if(launchUrl!=null){
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(launchUrl));
+                    startActivity(browserIntent);
+                }
                 data.remove(bigText);//This is mandatory, because the Old JSON data will still be stored that causes error while opening newest notification
                 data.remove(imgUrl);//
             }

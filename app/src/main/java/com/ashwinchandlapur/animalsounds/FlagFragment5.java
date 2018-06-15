@@ -42,6 +42,9 @@ public class FlagFragment5 extends Fragment {
 
 
 
+
+
+
         t=(TextView)view.findViewById(R.id.tv);
         TextView info = (TextView)view.findViewById(R.id.info);
         Typeface myFont = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Kaushan.otf");

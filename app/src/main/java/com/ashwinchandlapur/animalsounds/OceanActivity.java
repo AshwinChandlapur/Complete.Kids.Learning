@@ -28,9 +28,6 @@ public class OceanActivity extends AppCompatActivity {
         setContentView(R.layout.ocean_activity);
 
 
-
-
-
 		/* Instantiate a ViewPager and a PagerAdapter. */
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());

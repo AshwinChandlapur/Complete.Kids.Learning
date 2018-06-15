@@ -16,7 +16,6 @@
 #   public *;
 #}
 -ignorewarnings
-
 -keep class * {
     public private *;
 }

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".BabyShop.BabyShop">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Essentials\n👶"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p1"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p2"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p3"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p4"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p5"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Move\nAround\n🚗"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p6"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p7"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p8"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p9"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p10"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toys\n🛴"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p11"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p12"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p13"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p14"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p15"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fashionista\n💃"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p16"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p17"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p18"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p19"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p20"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="School\nTime\n🎓"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p21"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p22"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p23"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p24"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p25"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/baby6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For You!\n🎁"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"/>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p26"
+                        android:layout_marginLeft="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p27"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none"
+                        >
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p28"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p29"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                    <WebView
+                        android:layout_width="120dp"
+                        android:layout_height="240dp"
+                        android:id="@+id/p30"
+                        android:layout_margin="20dp"
+                        android:scrollbars="none">
+                    </WebView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

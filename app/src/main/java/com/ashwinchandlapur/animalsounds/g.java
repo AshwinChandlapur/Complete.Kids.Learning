@@ -18,10 +18,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rm.freedraw.FreeDrawView;
-import com.rm.freedraw.PathDrawnListener;
-import com.rm.freedraw.PathRedoUndoCountChangeListener;
-import com.rm.freedraw.ResizeBehaviour;
+
+import com.rm.freedrawview.FreeDrawView;
+import com.rm.freedrawview.PathDrawnListener;
+import com.rm.freedrawview.PathRedoUndoCountChangeListener;
+import com.rm.freedrawview.ResizeBehaviour;
 
 import java.util.Locale;
 
@@ -89,6 +90,11 @@ public class g extends Fragment {
         });
         // This listener will be notified every time a new path has been drawn
         mSignatureView.setOnPathDrawnListener(new PathDrawnListener() {
+            @Override
+            public void onPathStart() {
+
+            }
+
             @Override
             public void onNewPathDrawn() {
 

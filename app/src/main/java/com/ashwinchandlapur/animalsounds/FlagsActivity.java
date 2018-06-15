@@ -8,13 +8,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+
 
 
 public class FlagsActivity extends AppCompatActivity {
 
     // For this example, only two pages
     static final int NUM_ITEMS = 1;
-
     ViewPager mPager;
     SlidePagerAdapter mPagerAdapter;
 
@@ -26,9 +28,6 @@ public class FlagsActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //  this.supportrequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ocean_activity);
-
-
-
 
 
 		/* Instantiate a ViewPager and a PagerAdapter. */

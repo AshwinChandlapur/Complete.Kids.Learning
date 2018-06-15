@@ -15,9 +15,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.Locale;
 
@@ -25,8 +22,6 @@ import java.util.Locale;
 public class NumberFragment10 extends Fragment {
     TextView t;
     TextToSpeech tts;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
     //private static final String TAG = "FirstFragment";
 
 

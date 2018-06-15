@@ -9,68 +9,21 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
+
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
     int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-//        Thread thread = new Thread () {
-//            @Override
-//            public void run(){
-//
-//            }
-//        };thread.start();
-
-
-        Bundle extras = new Bundle();
-        extras.putBoolean("is_designed_for_families", true);
-
-        AdRequest adRequest = new AdRequest.Builder()
-        .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
-//                .addNetworkExtrasBundle(ScrollingActivity.class, extras)
-                .tagForChildDirectedTreatment(true)
-                .build();
-
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(ScrollingActivity.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                if (interstitial.isLoaded()) {
-                    interstitial.show();
-                }
-
-            }
-        });
         setContentView(R.layout.activity_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
     }
     @Override
     public void onBackPressed() {
@@ -120,17 +73,5 @@ public class ScrollingActivity extends AppCompatActivity {
        // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
-
-    public void displayInterstitial() {
-// If Ads are loaded, show Interstitial else show nothing.
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
-
-
-
-
-
 
 }

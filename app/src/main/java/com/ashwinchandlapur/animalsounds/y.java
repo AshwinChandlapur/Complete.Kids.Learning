@@ -18,11 +18,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.InterstitialAd;
-import com.rm.freedraw.FreeDrawView;
-import com.rm.freedraw.PathDrawnListener;
-import com.rm.freedraw.PathRedoUndoCountChangeListener;
-import com.rm.freedraw.ResizeBehaviour;
+import com.rm.freedrawview.FreeDrawView;
+import com.rm.freedrawview.PathDrawnListener;
+import com.rm.freedrawview.PathRedoUndoCountChangeListener;
+import com.rm.freedrawview.ResizeBehaviour;
 
 import java.util.Locale;
 
@@ -31,8 +30,8 @@ import petrov.kristiyan.colorpicker.ColorPicker;
 
 public class y extends Fragment {
     TextView t;
-    InterstitialAd mInterstitialAd;
-    private InterstitialAd interstitial;
+
+
     FreeDrawView mSignatureView;
     TextToSpeech tts;
     ColorPicker colorPicker;
@@ -79,7 +78,7 @@ public class y extends Fragment {
         mSignatureView.setPaintWidthDp(getResources().getDimension(R.dimen.paint_width));
         //mSignatureView.setPaintWidthDp(6);
         mSignatureView.setPaintAlpha(255);// from 0 to 255
-        mSignatureView.setResizeBehaviour(ResizeBehaviour.CROP);// Must be one of ResizeBehaviour
+        mSignatureView.setResizeBehaviour(ResizeBehaviour.CROP.CROP);// Must be one of ResizeBehaviour
         // values;
 
         // This listener will be notified every time the path done and undone count changes
@@ -96,6 +95,11 @@ public class y extends Fragment {
         });
         // This listener will be notified every time a new path has been drawn
         mSignatureView.setOnPathDrawnListener(new PathDrawnListener() {
+            @Override
+            public void onPathStart() {
+
+            }
+
             @Override
             public void onNewPathDrawn() {
 

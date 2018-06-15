@@ -27,7 +27,7 @@ public class feedbacks extends AppCompatActivity {
         setContentView(R.layout.activity_feedbacks);
 
 
-        final MaterialStyledDialog dialogHeader_2 = new MaterialStyledDialog(this)
+        final MaterialStyledDialog dialogHeader_2 = new MaterialStyledDialog.Builder(this)
                 .setIcon(R.mipmap.ic_launcher)
                 .withIconAnimation(true)
                 .setDescription("What can we improve? Your feedback is always welcome.")
@@ -47,7 +47,7 @@ public class feedbacks extends AppCompatActivity {
                 })
                 .build();
 
-        final MaterialStyledDialog dialogHeader_1 = new MaterialStyledDialog(this)
+        final MaterialStyledDialog dialogHeader_1 = new MaterialStyledDialog.Builder(this)
                 .setIcon(R.mipmap.ic_launcher)
                 .withDialogAnimation(true)
                 .setTitle("Awesome!")

@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/strip"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ashwinchandlapur.animalsounds.MainScroller"
     tools:showIn="@layout/activity_main_scroller">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:layout_width="match_parent"
@@ -27,7 +26,7 @@
             android:id="@+id/alphabets"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:onClick="alphabets" />
+            />
 
 
         <ImageButton
@@ -43,7 +42,8 @@
             android:id="@+id/animals"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:onClick="animals" />
+            />
+
 
         <ImageButton
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
             android:id="@+id/bodyparts"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:onClick="bodyparts" />
+             />
 
         <ImageButton
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             android:id="@+id/numbers"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:onClick="numbers" />
+             />
 
         <ImageButton
             android:layout_width="match_parent"
@@ -88,21 +88,36 @@
             android:layout_below="@+id/numbers"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:onClick="flags"
+            />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/babyshop"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:id="@+id/babyshop"
+            android:layout_below="@+id/flags"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
             />
 
 
 
 
 
-       <!-- <ToggleButton android:id="@+id/toggle"
-            android:textOff="Receiving notifications disabled."
-            android:textOn="Receiving notifications enabled."
-            android:textColor="#ffffff"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true" />
-        -->
+
+        <!-- <ToggleButton android:id="@+id/toggle"
+             android:textOff="Receiving notifications disabled."
+             android:textOn="Receiving notifications enabled."
+             android:textColor="#ffffff"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true" />
+         -->
 
         <TextView
             android:layout_width="match_parent"
